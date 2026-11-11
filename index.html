@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotticious Cafe | Bakery • Coffee • Desserts | Chennai</title>
+  <meta name="description" content="Moving beyond Roti, Kapda aur Makaan. Discover Rotticious Cafe in Chennai — 100% Chikmagalur specialty coffee, Neapolitan pizzas, artisanal bakery & rooftop beach vibes across Thiruvanmiyur, OMR & Royapettah.">
+  <meta name="keywords" content="Rotticious Cafe, Chennai Cafe, Thiruvanmiyur Beach Cafe, Chikmagalur Coffee, Neapolitan Pizza Chennai, Bakery, rottikaappicake, OMR Cafe">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for Starbucks-grade visual polish -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="top-bar-left">
+        <span class="badge-pill pulse">✨ Chennai's Coastal Flagship</span>
+        <span>Beach rooftop coffee & sunset vibes at Thiruvanmiyur • Live Music Weekends</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="#branches"><i class="fa-solid fa-location-dot"></i> 3 Chennai Branches</a>
+        <span class="divider">|</span>
+        <a href="tel:+919789001434"><i class="fa-solid fa-phone"></i> +91 97890 01434</a>
+        <span class="divider">|</span>
+        <span class="brand-tag">#rottikaappicake</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header (Sticky Starbucks style) -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-mark">
+          <i class="fa-solid fa-mug-hot"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">ROTTICIOUS</span>
+          <span class="brand-subline">BAKERY • COFFEE • DESSERTS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">Our Story</a>
+        <a href="#branches" class="nav-link">Cafes & Lounges</a>
+        <a href="#menu" class="nav-link">Curated Menu</a>
+        <a href="#experiences" class="nav-link">Experiences</a>
+        <a href="#perks" class="nav-link">RottiPerks Rewards</a>
+      </nav>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <button class="btn btn-outline" id="btnOpenReserve">
+          <i class="fa-regular fa-calendar-check"></i> Reserve Table
+        </button>
+        <button class="btn btn-primary" id="btnHeaderOrder">
+          <i class="fa-solid fa-bag-shopping"></i> Order Online
+        </button>
+        <button class="cart-trigger-btn" id="btnOpenCart" aria-label="View Cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+        <button class="mobile-toggle-btn" id="mobileMenuBtn" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav-backdrop" id="mobileBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="logo-text">
+        <span class="brand-name">ROTTICIOUS</span>
+        <span class="brand-subline">Bakery • Coffee • Desserts</span>
+      </div>
+      <button class="close-drawer-btn" id="closeMobileDrawer">&times;</button>
+    </div>
+    <div class="mobile-drawer-links">
+      <a href="#hero" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">The Rotti Story</a>
+      <a href="#branches" class="mobile-link">3 Chennai Branches & Live Status</a>
+      <a href="#menu" class="mobile-link">Curated Menu & Brews</a>
+      <a href="#experiences" class="mobile-link">Experiences & Jam Nights</a>
+      <a href="#perks" class="mobile-link">#RottiPerks Rewards</a>
+    </div>
+    <div class="mobile-drawer-actions">
+      <button class="btn btn-outline w-100 mb-2" id="btnMobileReserve"><i class="fa-regular fa-calendar-check"></i> Reserve a Table</button>
+      <button class="btn btn-primary w-100" id="btnMobileOrder"><i class="fa-solid fa-bag-shopping"></i> Order on Delivery</button>
+      <div class="mobile-contact-pill">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp: +91 97890 01434
+      </div>
+    </div>
+  </aside>
+
+  <!-- Hero Section (Starbucks Reserve / Coastal Aesthetic) -->
+  <section class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-tagline-badge">
+          <span class="sparkle-icon">✨</span>
+          <span>Moving beyond Roti, Kapda aur Makaan</span>
+        </div>
+        
+        <h1 class="hero-title">
+          The Only Three Essentials That Truly Matter:
+          <span class="hero-highlight">Bakery, Coffee & Desserts.</span>
+        </h1>
+        
+        <p class="hero-desc">
+          Crafted with 100% Chikmagalur single-estate coffee beans, hand-stretched Neapolitan pizzas, sizzling southern chicken steaks, and sunlit sea breezes atop our Thiruvanmiyur rooftop.
+        </p>
+
+        <!-- CTA Action Cluster -->
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-utensils"></i> Explore Menu
+          </a>
+          <button class="btn btn-glass btn-lg" id="btnHeroReserve">
+            <i class="fa-solid fa-champagne-glasses"></i> Book Beach Rooftop Table
+          </button>
+          <button class="btn btn-outline-light btn-lg" id="btnHeroDelivery">
+            <i class="fa-solid fa-motorcycle"></i> Quick Delivery
+          </button>
+        </div>
+
+        <!-- Hero Highlights Trust Badges -->
+        <div class="hero-metrics">
+          <div class="metric-item">
+            <span class="metric-value">100%</span>
+            <span class="metric-label">Chikmagalur Specialty Coffee</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric-item">
+            <span class="metric-value">20+</span>
+            <span class="metric-label">Artisan Brewing Styles</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric-item">
+            <span class="metric-value">4.8 ★</span>
+            <span class="metric-label">Beach Flagship Rating</span>
+          </div>
+          <div class="metric-sep"></div>
+          <div class="metric-item">
+            <span class="metric-value">3</span>
+            <span class="metric-label">Iconic Chennai Outlets</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card Slider / Showcase -->
+      <div class="hero-visual">
+        <div class="hero-image-stack">
+          <div class="hero-card main-card">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1000&q=80" alt="Chikmagalur Specialty Latte Art at Rotticious Cafe" class="hero-img">
+            <div class="hero-card-badge">
+              <span class="badge-dot"></span>
+              <div>
+                <strong>Spanish Iced Latte</strong>
+                <small>Chikmagalur Dark Roast • ₹240</small>
+              </div>
+            </div>
+          </div>
+          <div class="hero-floating-pill pill-top">
+            <i class="fa-solid fa-water"></i> Thiruvanmiyur Beach Rooftop View
+          </div>
+          <div class="hero-floating-pill pill-bottom">
+            <i class="fa-solid fa-wifi"></i> Laptop Haven • Free High-Speed Wi-Fi
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition Bar (Starbucks Reserve Style) -->
+  <section class="value-strip">
+    <div class="container value-strip-container">
+      <div class="value-item">
+        <div class="value-icon"><i class="fa-solid fa-seedling"></i></div>
+        <div class="value-text">
+          <h4>Estate-to-Cup Purity</h4>
+          <p>Directly sourced shade-grown beans from Chikmagalur hills.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon"><i class="fa-solid fa-pizza-slice"></i></div>
+        <div class="value-text">
+          <h4>Fermented Neapolitan Crusts</h4>
+          <p>Hand-tossed dough fermented for 48 hours for blistered airy crust.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon"><i class="fa-solid fa-bread-slice"></i></div>
+        <div class="value-text">
+          <h4>Fresh Artisanal Bakery</h4>
+          <p>Warm Lotus Biscoff cakes, sourdough & cinnamon rolls baked daily.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <div class="value-icon"><i class="fa-solid fa-music"></i></div>
+        <div class="value-text">
+          <h4>Vibrant Cafe Culture</h4>
+          <p>Acoustic jam nights, weekend biker pitstops & brand museum.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 3-Branch Experience Selector (Starbucks Store Locator Grade) -->
+  <section class="branches-section" id="branches">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">OUR CHENNAI DESTINATIONS</div>
+        <h2 class="section-title">Three Distinct Vibes. One Soul.</h2>
+        <p class="section-subtitle">Whether you crave coastal ocean sunsets, a quiet rustic workspace on OMR, or the aroma of our legacy bakery counter in Royapettah — there is a table waiting for you.</p>
+      </div>
+
+      <!-- Branch Selection Tabs -->
+      <div class="branch-tabs" role="tablist">
+        <button class="branch-tab active" data-branch="thiruvanmiyur" role="tab" aria-selected="true">
+          <i class="fa-solid fa-umbrella-beach"></i>
+          <div>
+            <strong>Thiruvanmiyur Beach</strong>
+            <small>Coastal Rooftop Flagship • 4.8 ★</small>
+          </div>
+        </button>
+        <button class="branch-tab" data-branch="sholinganallur" role="tab" aria-selected="false">
+          <i class="fa-solid fa-laptop-code"></i>
+          <div>
+            <strong>Sholinganallur (OMR)</strong>
+            <small>Work-Friendly & Jam Hub • 4.4 ★</small>
+          </div>
+        </button>
+        <button class="branch-tab" data-branch="royapettah" role="tab" aria-selected="false">
+          <i class="fa-solid fa-cookie-bite"></i>
+          <div>
+            <strong>Royapettah Landmark</strong>
+            <small>Artisanal Bakery & Heritage • 4.0 ★</small>
+          </div>
+        </button>
+      </div>
+
+      <!-- Branch Dynamic Display Container -->
+      <div class="branch-display-card" id="branchCard">
+        <!-- Content dynamically populated / toggled via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Curated Menu Section with Live Filter Tabs & Quick Add -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">HANDCRAFTED DELIGHTS</div>
+        <h2 class="section-title">The Curated Rotticious Menu</h2>
+        <p class="section-subtitle">From signature southern chicken steaks to 20+ Chikmagalur brew styles and decadent Lotus Biscoff cakes.</p>
+      </div>
+
+      <!-- Search & Dietary Filter Controls -->
+      <div class="menu-controls">
+        <div class="menu-search-box">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" id="menuSearchInput" placeholder="Search coffee, steaks, Neapolitan pizza, cheesecake..." aria-label="Search menu">
+          <button id="clearSearchBtn" class="clear-btn" style="display:none;">&times;</button>
+        </div>
+
+        <div class="dietary-filters">
+          <button class="filter-chip active" data-diet="all">All Items</button>
+          <button class="filter-chip" data-diet="veg"><span class="veg-badge"></span> Veg Only</button>
+          <button class="filter-chip" data-diet="non-veg"><span class="nonveg-badge"></span> Non-Veg</button>
+          <button class="filter-chip" data-diet="signature"><i class="fa-solid fa-star text-gold"></i> Chef's Signature</button>
+          <button class="filter-chip" data-diet="budget">Under ₹250</button>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="category-tabs">
+        <button class="category-btn active" data-category="all">
+          <i class="fa-solid fa-border-all"></i> Full Showcase
+        </button>
+        <button class="category-btn" data-category="coffee">
+          <i class="fa-solid fa-mug-saucer"></i> 100% Chikmagalur Coffee & Beverages
+        </button>
+        <button class="category-btn" data-category="steaks">
+          <i class="fa-solid fa-drumstick-bite"></i> Signature Steaks & Mains
+        </button>
+        <button class="category-btn" data-category="pizzas">
+          <i class="fa-solid fa-pizza-slice"></i> Neapolitan Pizzas & Burgers
+        </button>
+        <button class="category-btn" data-category="bakery">
+          <i class="fa-solid fa-cake-candles"></i> Artisanal Bakery & Desserts
+        </button>
+        <button class="category-btn" data-category="sides">
+          <i class="fa-solid fa-plate-wheat"></i> Small Plates & Sides
+        </button>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Menu Footer Banner -->
+      <div class="menu-footer-callout">
+        <div class="callout-content">
+          <h3>Hosting an event or looking for custom celebration cakes?</h3>
+          <p>We craft customized tiers, artisanal bakes, and curated coffee catering for birthdays, corporate retreats & private gatherings.</p>
+        </div>
+        <button class="btn btn-primary" id="btnCustomCatering">
+          <i class="fa-brands fa-whatsapp"></i> Chat for Custom Orders
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiences & Lifestyle Section -->
+  <section class="experiences-section" id="experiences">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">COMMUNITY & LIFESTYLE</div>
+        <h2 class="section-title">More Than a Cafe. It's a Chennai Culture.</h2>
+        <p class="section-subtitle">We built Rotticious to be your creative sanctuary, weekend hangout, and sunset retreat.</p>
+      </div>
+
+      <div class="experiences-grid">
+        <!-- Card 1: Work from Cafe -->
+        <div class="experience-card">
+          <div class="exp-img-wrap">
+            <img src="https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2?auto=format&fit=crop&w=800&q=80" alt="Work from Rotticious Cafe OMR" loading="lazy">
+            <span class="exp-badge">OMR Hub & Valmiki Nagar</span>
+          </div>
+          <div class="exp-body">
+            <div class="exp-icon"><i class="fa-solid fa-laptop"></i></div>
+            <h3>Work-From-Café Haven</h3>
+            <p>Designed for creators and tech professionals. High-speed 300 Mbps Wi-Fi, universal power sockets at every booth, quiet ambient playlist, and bottomless Americanos.</p>
+            <ul class="exp-perks-list">
+              <li><i class="fa-solid fa-check"></i> Ergonomic seating & natural light</li>
+              <li><i class="fa-solid fa-check"></i> Power stations at every table</li>
+              <li><i class="fa-solid fa-check"></i> Barista recharge discounts</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 2: Live Music & Jam Nights -->
+        <div class="experience-card">
+          <div class="exp-img-wrap">
+            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" alt="Live Music and Jam Nights at Rotticious" loading="lazy">
+            <span class="exp-badge">Every Fri & Sat Night</span>
+          </div>
+          <div class="exp-body">
+            <div class="exp-icon"><i class="fa-solid fa-guitar"></i></div>
+            <h3>Live Music & Acoustic Jam Nights</h3>
+            <p>Soak in the coastal breeze while indie singers, acoustic guitarists, and jazz duos set the stage under fairy-lit rooftops in Thiruvanmiyur and Sholinganallur.</p>
+            <ul class="exp-perks-list">
+              <li><i class="fa-solid fa-check"></i> Chennai indie artists & open mics</li>
+              <li><i class="fa-solid fa-check"></i> Candlelight dinner seating</li>
+              <li><i class="fa-solid fa-check"></i> Signature mocktail pairings</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 3: Weekend Biker & Rider Meets -->
+        <div class="experience-card">
+          <div class="exp-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80" alt="Weekend Biker Pitstop ECR OMR Rotticious" loading="lazy">
+            <span class="exp-badge">ECR & OMR Highway Pitstop</span>
+          </div>
+          <div class="exp-body">
+            <div class="exp-icon"><i class="fa-solid fa-motorcycle"></i></div>
+            <h3>Weekend Biker & Cycling Pitstops</h3>
+            <p>Hitting the East Coast Road at dawn? Open from 6:00 AM at Thiruvanmiyur beach with dedicated rider parking, cold brew refuels, and hearty breakfast steaks.</p>
+            <ul class="exp-perks-list">
+              <li><i class="fa-solid fa-check"></i> Early morning 6 AM opening</li>
+              <li><i class="fa-solid fa-check"></i> Safe parking & gear rest area</li>
+              <li><i class="fa-solid fa-check"></i> High-protein steak & egg platters</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Card 4: Mini Brand Journey Art Museum -->
+        <div class="experience-card">
+          <div class="exp-img-wrap">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Rotticious Mini Brand Museum at Beach Flagship" loading="lazy">
+            <span class="exp-badge">Exclusively at Thiruvanmiyur</span>
+          </div>
+          <div class="exp-body">
+            <div class="exp-icon"><i class="fa-solid fa-landmark"></i></div>
+            <h3>The Rotticious Brand Journey Museum</h3>
+            <p>Explore our flagship art gallery documenting the legacy of #rottikaappicake, Chikmagalur bean origins, manual siphon brewing history, and hand-baked artisan crafts.</p>
+            <ul class="exp-perks-list">
+              <li><i class="fa-solid fa-check"></i> Interactive coffee bean aroma station</li>
+              <li><i class="fa-solid fa-check"></i> Visual story of Chennai's cafe revival</li>
+              <li><i class="fa-solid fa-check"></i> Free entry for all cafe patrons</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story & Philosophy Section -->
+  <section class="story-section" id="about">
+    <div class="container story-container">
+      <div class="story-visual">
+        <div class="story-image-grid">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Chikmagalur Specialty Coffee Beans" class="grid-img img-1">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80" alt="Fresh Artisanal Bakery Sourdough" class="grid-img img-2">
+          <div class="story-stat-card">
+            <span class="number">20+</span>
+            <span class="text">Specialty Manual & Cold Brew Styles</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-content">
+        <div class="section-tag">THE PHILOSOPHY</div>
+        <h2 class="section-title">Beyond Roti, Kapda aur Makaan.</h2>
+        <p class="lead-text">
+          Generations were told that survival was about food, clothing, and shelter. But in modern Chennai, true living begins when the mind slows down, great coffee pours, and warm bread breaks.
+        </p>
+        <p class="story-body">
+          Rotticious was born out of a rebellion against soulless commercial brews. We mapped out the highest-altitude estates in Chikmagalur to source shade-grown Arabica and craft-roasted beans. We installed stone-deck ovens to ferment slow Neapolitan pizzas, and created a sanctuary where remote workers, coastal dreamers, and dessert lovers unite.
+        </p>
+
+        <div class="story-pillars">
+          <div class="pillar">
+            <span class="pillar-num">01</span>
+            <div>
+              <h4>Bakery (Rotti)</h4>
+              <p>Fermented Neapolitan dough, French croissants, and artisanal loaves baked before dawn.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">02</span>
+            <div>
+              <h4>Coffee (Kaappi)</h4>
+              <p>100% single-estate Chikmagalur beans calibrated across 20+ pour-overs, cold drips & espressos.</p>
+            </div>
+          </div>
+          <div class="pillar">
+            <span class="pillar-num">03</span>
+            <div>
+              <h4>Desserts (Cake)</h4>
+              <p>Handcrafted Lotus Biscoff cakes, rich NYC cheesecakes, and fudge brownies with zero shortcuts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hashtag-pill mt-3">
+          <strong>#ROTTIKAAPPICAKE</strong> — The Chennai Cafe Revolution
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Starbucks-Style Rewards / #RottiPerks Section -->
+  <section class="perks-section" id="perks">
+    <div class="container">
+      <div class="perks-card">
+        <div class="perks-content">
+          <div class="badge-pill gold-badge"><i class="fa-solid fa-crown"></i> Rotticious Loyalty Club</div>
+          <h2 class="perks-title">Sip, Savor & Unlock #RottiPerks</h2>
+          <p class="perks-desc">Join 12,000+ Chennai coffee and dessert lovers. Earn 5 RottiBeans for every ₹100 spent across all branches or online delivery.</p>
+
+          <div class="perks-tiers">
+            <div class="tier-card">
+              <div class="tier-icon"><i class="fa-solid fa-mug-hot"></i></div>
+              <h4>50 Beans</h4>
+              <p>Free Double Espresso or Artisanal Cookie on your next visit.</p>
+            </div>
+            <div class="tier-card active-tier">
+              <div class="tier-icon"><i class="fa-solid fa-cake-candles"></i></div>
+              <h4>120 Beans</h4>
+              <p>Complimentary Slice of Lotus Biscoff or NYC Cheesecake.</p>
+            </div>
+            <div class="tier-card">
+              <div class="tier-icon"><i class="fa-solid fa-star"></i></div>
+              <h4>250 Beans</h4>
+              <p>Beach Rooftop VIP Sunset Table reservation with Chef's Steak plate.</p>
+            </div>
+          </div>
+
+          <div class="perks-form">
+            <input type="text" id="perksPhone" placeholder="Enter your mobile number for instant 25 Welcome Beans" class="perks-input">
+            <button class="btn btn-gold" id="btnJoinPerks"><i class="fa-solid fa-bolt"></i> Claim Free Beans</button>
+          </div>
+          <small class="perks-disclaimer">*Instant activation via SMS OTP. Valid at Thiruvanmiyur, OMR & Royapettah branches.</small>
+        </div>
+        <div class="perks-visual">
+          <img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=700&q=80" alt="Iced Coffee at Rotticious" class="perks-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diner Reviews & Testimonials Carousel -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">COMMUNITY LOVE</div>
+        <h2 class="section-title">Loved by Thousands Across Chennai</h2>
+        <div class="aggregate-rating">
+          <span class="rating-stars">★★★★★</span>
+          <span class="rating-text">4.8 / 5.0 Average across Google Reviews & Swiggy</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-body">"The beach rooftop at Thiruvanmiyur is genuinely unbeatable in Chennai. Sipping their Spanish Iced Latte with the sea breeze and a warm Margherita pizza is my mandatory Saturday ritual."</p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">AK</div>
+            <div>
+              <strong>Aravind Krishnan</strong>
+              <small>Local Guide • 142 reviews • Thiruvanmiyur</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card featured-review">
+          <div class="review-badge"><i class="fa-solid fa-fire"></i> Must-Try</div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-body">"Finally a cafe on OMR that gets work-from-cafe right! Stable Wi-Fi, abundant plugs, courteous staff, and the Chicken Steak in Southern Spice is the best steak in town. 10/10."</p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">PN</div>
+            <div>
+              <strong>Pooja Natarajan</strong>
+              <small>Tech Lead, Sholinganallur • Regular Patron</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-body">"Royapettah counter has the softest cinnamon buns and freshest chocolate bread. Right opposite Sathyam Cinemas, it's our family's favorite post-movie coffee and dessert spot."</p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">RR</div>
+            <div>
+              <strong>Raghavan Raman</strong>
+              <small>Food Critic & Architect • Royapettah</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram / Community Visual Wall -->
+  <section class="instagram-section">
+    <div class="container text-center mb-4">
+      <span class="section-tag">FOLLOW THE JOURNEY</span>
+      <h2 class="section-title">Tag @rotticious to be Featured</h2>
+      <p class="section-subtitle">Share your coffee moments with <span class="text-gold font-bold">#rottikaappicake</span> on Instagram</p>
+    </div>
+    <div class="insta-stream">
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=500&q=80" alt="Coffee Instagram" loading="lazy">
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i> @rotticious</div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=500&q=80" alt="Neapolitan Pizza Instagram" loading="lazy">
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i> @rotticiouscafe</div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=500&q=80" alt="Lotus Biscoff Cake Instagram" loading="lazy">
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i> #rottikaappicake</div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=500&q=80" alt="Beach Rooftop Sunset" loading="lazy">
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i> @rotticious</div>
+      </div>
+      <div class="insta-item">
+        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500&q=80" alt="Chicken Steak Instagram" loading="lazy">
+        <div class="insta-overlay"><i class="fa-brands fa-instagram"></i> #ChennaiCafes</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reservation & Online Order Quick Actions Banner -->
+  <section class="booking-cta-section">
+    <div class="container booking-cta-container">
+      <div class="booking-cta-text">
+        <h2>Reserve Your Spot or Order Direct to Your Doorstep</h2>
+        <p>Instant table confirmation for rooftop beach dining, live music tables, or direct delivery through Swiggy, Zomato & WhatsApp.</p>
+      </div>
+      <div class="booking-cta-actions">
+        <button class="btn btn-primary btn-lg" id="btnBannerReserve">
+          <i class="fa-regular fa-calendar-check"></i> Book Table Online
+        </button>
+        <button class="btn btn-glass btn-lg" id="btnBannerWhatsApp">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Booking
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Starbucks-Tier Master Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand Info -->
+      <div class="footer-col brand-col">
+        <div class="logo-mark footer-logo">
+          <i class="fa-solid fa-mug-hot"></i>
+          <span>ROTTICIOUS</span>
+        </div>
+        <p class="footer-motto">
+          Moving beyond Roti, Kapda aur Makaan to bring you the only three essentials that truly matter: Bakery | Coffee | Desserts.
+        </p>
+        <div class="footer-social-links">
+          <a href="https://instagram.com/rotticious" target="_blank" rel="noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://instagram.com/rotticiouscafe" target="_blank" rel="noreferrer" aria-label="Instagram Cafe"><i class="fa-brands fa-camera-retro"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://wa.me/919789001434" target="_blank" rel="noreferrer" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="contact-email mt-2">
+          <i class="fa-regular fa-envelope"></i> <a href="mailto:rotticious@gmail.com">rotticious@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- Col 2: Outlets & Direct Contact -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Our Chennai Outlets</h4>
+        <ul class="footer-list">
+          <li>
+            <strong>Thiruvanmiyur Beach Flagship:</strong><br>
+            111, Valmiki Nagar, Kottivakkam Beach<br>
+            <a href="tel:+919789001434" class="phone-link"><i class="fa-solid fa-phone"></i> +91 97890 01434</a>
+          </li>
+          <li class="mt-2">
+            <strong>Sholinganallur (OMR Hub):</strong><br>
+            151, Rajiv Gandhi Salai, OMR<br>
+            <a href="tel:+919539696750" class="phone-link"><i class="fa-solid fa-phone"></i> +91 95396 96750</a>
+          </li>
+          <li class="mt-2">
+            <strong>Royapettah Landmark:</strong><br>
+            Thiru-vi-ka Rd (Opp. Sathyam Cinemas)<br>
+            <a href="tel:+918754449754" class="phone-link"><i class="fa-solid fa-phone"></i> +91 87544 49754</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Quick Navigation -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-list link-list">
+          <li><a href="#menu"><i class="fa-solid fa-chevron-right"></i> Curated Food & Coffee Menu</a></li>
+          <li><a href="#branches"><i class="fa-solid fa-chevron-right"></i> Branch Hours & Maps</a></li>
+          <li><a href="#experiences"><i class="fa-solid fa-chevron-right"></i> Work-From-Cafe & Jam Nights</a></li>
+          <li><a href="#perks"><i class="fa-solid fa-chevron-right"></i> #RottiPerks Loyalty Program</a></li>
+          <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> The Chikmagalur Story</a></li>
+          <li><a href="javascript:void(0)" id="footerReserveLink"><i class="fa-solid fa-chevron-right"></i> Reserve Beach Rooftop Table</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Newsletter & Direct Order Integration -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Order Direct & Delivery</h4>
+        <p class="text-muted-sm">Available on all leading platforms in Chennai or order directly for takeaway & curbside pickup.</p>
+        
+        <div class="delivery-partner-badges">
+          <button class="delivery-chip zomato" onclick="openDeliveryModal('Zomato')">
+            <span class="delivery-name">Zomato</span>
+            <span class="delivery-sub">Order & Dine-in</span>
+          </button>
+          <button class="delivery-chip swiggy" onclick="openDeliveryModal('Swiggy')">
+            <span class="delivery-name">Swiggy</span>
+            <span class="delivery-sub">Express Delivery</span>
+          </button>
+          <button class="delivery-chip dineout" onclick="openDeliveryModal('Dineout')">
+            <span class="delivery-name">District / Dineout</span>
+            <span class="delivery-sub">Instant Table Offers</span>
+          </button>
+        </div>
+
+        <div class="newsletter-box mt-3">
+          <label for="newsletterEmail" class="newsletter-label">Subscribe for Secret Brew Drops</label>
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmail" placeholder="your.name@email.com">
+            <button class="btn btn-primary" id="btnNewsletterSub"><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sub-footer Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-container">
+        <div>
+          © <span id="currentYear">2026</span> Rotticious Cafe Private Limited. All Rights Reserved. #rottikaappicake
+        </div>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)">Privacy Policy</a>
+          <span>•</span>
+          <a href="javascript:void(0)">Terms of Service</a>
+          <span>•</span>
+          <a href="javascript:void(0)">FSSAI License #12421008000412</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Out Cart / Order Drawer (Starbucks Mobile Order Style) -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="cart-drawer-header">
+      <div class="cart-title-wrap">
+        <h3><i class="fa-solid fa-bag-shopping"></i> Your Rotti Order</h3>
+        <span class="cart-subtitle" id="cartSubtitle">0 items selected</span>
+      </div>
+      <button class="close-cart-btn" id="btnCloseCart">&times;</button>
+    </div>
+
+    <div class="cart-drawer-body" id="cartItemsList">
+      <!-- Empty state / dynamically populated -->
+      <div class="cart-empty-state" id="cartEmptyState">
+        <i class="fa-solid fa-mug-saucer empty-icon"></i>
+        <h4>Your tray is currently empty</h4>
+        <p>Explore our Chikmagalur specialty brews, Neapolitan pizzas, and fresh artisanal bakery treats.</p>
+        <button class="btn btn-outline" id="btnStartOrdering">Browse Menu</button>
+      </div>
+    </div>
+
+    <div class="cart-drawer-footer" id="cartFooter" style="display:none;">
+      <div class="cart-summary-line">
+        <span>Item Subtotal</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="cart-summary-line">
+        <span>Taxes & GST (5%)</span>
+        <span id="cartTax">₹0</span>
+      </div>
+      <div class="cart-summary-line total-line">
+        <span>Grand Total</span>
+        <span id="cartTotal" class="total-price">₹0</span>
+      </div>
+      
+      <div class="cart-actions mt-3">
+        <button class="btn btn-primary w-100 mb-2" id="btnCheckoutWhatsApp">
+          <i class="fa-brands fa-whatsapp"></i> Send Order via WhatsApp
+        </button>
+        <button class="btn btn-outline w-100" id="btnCheckoutDelivery">
+          <i class="fa-solid fa-motorcycle"></i> Order on Swiggy / Zomato
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Table Reservation Modal Dialog -->
+  <div class="modal-backdrop" id="reservationModal">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div>
+          <span class="modal-pretitle">DINE WITH US</span>
+          <h3 class="modal-title">Table Reservation</h3>
+        </div>
+        <button class="modal-close" id="btnCloseReservation">&times;</button>
+      </div>
+
+      <form id="reservationForm" class="modal-form">
+        <div class="form-group">
+          <label for="resBranch">Select Cafe Location *</label>
+          <select id="resBranch" required>
+            <option value="thiruvanmiyur" selected>Thiruvanmiyur Beach Flagship (Rooftop & Sea View)</option>
+            <option value="sholinganallur">Sholinganallur OMR (Rustic Cafe & Live Music)</option>
+            <option value="royapettah">Royapettah Landmark (Artisanal Bakery & Family Dining)</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-half">
+            <label for="resDate">Reservation Date *</label>
+            <input type="date" id="resDate" required>
+          </div>
+          <div class="form-group col-half">
+            <label for="resTime">Preferred Time *</label>
+            <select id="resTime" required>
+              <option value="08:00 AM">08:00 AM (Early Beach Breakfast)</option>
+              <option value="11:30 AM">11:30 AM (Brunch & Coffee)</option>
+              <option value="01:30 PM">01:30 PM (Lunch & Steaks)</option>
+              <option value="04:30 PM">04:30 PM (Coffee & High Tea)</option>
+              <option value="06:30 PM" selected>06:30 PM (Sunset Golden Hour)</option>
+              <option value="08:30 PM">08:30 PM (Dinner & Live Jam)</option>
+              <option value="10:00 PM">10:00 PM (Late Night Dessert)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-half">
+            <label for="resGuests">Number of Guests *</label>
+            <select id="resGuests" required>
+              <option value="1 Person">1 Person (Solo Work / Read)</option>
+              <option value="2 People" selected>2 People (Date / Cozy Table)</option>
+              <option value="3-4 People">3 - 4 People (Friends & Family)</option>
+              <option value="5-8 People">5 - 8 People (Group Gathering)</option>
+              <option value="9+ People">9+ People (Party / Celebration)</option>
+            </select>
+          </div>
+          <div class="form-group col-half">
+            <label for="resSeating">Seating Preference</label>
+            <select id="resSeating">
+              <option value="Beach View Rooftop" selected>Beach View Rooftop (Thiruvanmiyur)</option>
+              <option value="Quiet Work Booth">Quiet Work Booth (with Power Sockets)</option>
+              <option value="Garden & Open Air">Garden / Open Air Seating</option>
+              <option value="Artisanal Bakery Lounge">Artisanal Bakery Counter</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group col-half">
+            <label for="resName">Your Full Name *</label>
+            <input type="text" id="resName" placeholder="e.g. Vikramaditya" required>
+          </div>
+          <div class="form-group col-half">
+            <label for="resPhone">Phone Number *</label>
+            <input type="tel" id="resPhone" placeholder="e.g. +91 98765 43210" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="resNotes">Special Requests / Occasion</label>
+          <input type="text" id="resNotes" placeholder="e.g. Birthday celebration, anniversary cake, quiet corner">
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline" id="btnCancelRes">Cancel</button>
+          <button type="submit" class="btn btn-primary" id="btnConfirmReservation">
+            <i class="fa-regular fa-circle-check"></i> Confirm Reservation
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Delivery Partner Selection Modal -->
+  <div class="modal-backdrop" id="deliveryModal">
+    <div class="modal-window max-w-md">
+      <div class="modal-header">
+        <div>
+          <span class="modal-pretitle">ONLINE ORDERING</span>
+          <h3 class="modal-title" id="deliveryModalTitle">Select Order Destination</h3>
+        </div>
+        <button class="modal-close" id="btnCloseDelivery">&times;</button>
+      </div>
+      <div class="modal-body p-4">
+        <p class="text-muted mb-4">Choose your preferred branch to order freshly prepared Neapolitan pizza, coffee brews, and artisanal bakery goodies:</p>
+        <div class="delivery-outlet-list">
+          <a href="https://www.zomato.com/chennai" target="_blank" rel="noreferrer" class="delivery-option-card">
+            <div class="option-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+            <div class="option-info">
+              <strong>Thiruvanmiyur Beach Flagship</strong>
+              <small>Serving ECR, Adyar, Besant Nagar, Kottivakkam</small>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+          <a href="https://www.swiggy.com/restaurants" target="_blank" rel="noreferrer" class="delivery-option-card">
+            <div class="option-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="option-info">
+              <strong>Sholinganallur (OMR Hub)</strong>
+              <small>Serving OMR, Perungudi, Medavakkam, Navalur</small>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+
+          <a href="https://www.zomato.com/chennai" target="_blank" rel="noreferrer" class="delivery-option-card">
+            <div class="option-icon"><i class="fa-solid fa-cookie-bite"></i></div>
+            <div class="option-info">
+              <strong>Royapettah Landmark</strong>
+              <small>Serving Central Chennai, Mylapore, Gopalapuram, Nungambakkam</small>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+        
+        <div class="whatsapp-direct-box mt-4">
+          <div class="text-sm font-semibold mb-1"><i class="fa-brands fa-whatsapp text-success"></i> Prefer Direct WhatsApp Order?</div>
+          <p class="text-xs text-muted mb-2">Get 10% off your first takeaway order and skip delivery aggregators!</p>
+          <a href="https://wa.me/919789001434?text=Hi%20Rotticious!%20I%20would%20like%20to%20place%20a%20direct%20order." target="_blank" class="btn btn-whatsapp w-100">
+            Chat & Order on WhatsApp (+91 97890 01434)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Quick Floating Action Button for Mobile -->
+  <div class="fab-wrapper">
+    <button class="fab-btn" id="fabReserveBtn" title="Instant Table Reservation">
+      <i class="fa-regular fa-calendar-check"></i>
+      <span class="fab-text">Reserve</span>
+    </button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
